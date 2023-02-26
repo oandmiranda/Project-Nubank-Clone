@@ -1,0 +1,585 @@
+
+/* estrutura do site
+------------------------*/
+* {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    font-size: 1.2em;
+    box-sizing: border-box;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+:root { /* cores */
+    --roxo: #651cb8ec;
+    --lilas: rgb(167, 83, 235);
+    --branco: #fff;
+    --cinza: rgb(165, 162, 162);
+}
+
+
+/* formatações
+------------------------*/
+ul {
+    list-style: none;
+}
+
+a {
+    color: var(--branco);
+    text-decoration: none;
+}
+
+a:hover, .selecionado a {
+    color: var(--roxo);
+    font-weight: bold;
+}
+
+/* não soube setar a animação nessa caraia */
+@keyframes borda {
+    from {border-bottom: 0;
+    }
+    to {
+        border-bottom: 100px;
+    }
+}
+
+h1 {
+    font-size: 18px;
+}
+
+h2 {
+    font-size: 16px;
+}
+
+
+/* area topo
+------------------------*/
+nav {
+    min-width: 900px;
+}
+
+
+nav li {
+    padding: 0 13px;
+    
+}
+
+nav div ul li a {
+    font-size: 17px;
+    color: black
+  
+}
+
+nav ul li a:hover {
+    color: var(--cinza);
+}
+
+
+span#login a {
+    color: var(--roxo);
+    font-size: 19px;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+span#login a:hover {
+    text-decoration: underline;
+}
+
+/* area header
+------------------------*/
+header {
+    width: 100%;
+    min-width: 900px;
+    height: 100vh;
+    background: url(../images/header.webp) no-repeat center;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#header-content {
+    margin: 0 auto;
+    width: 94%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    position: relative;
+    top: 180px;
+
+}
+
+.text-area {
+    width: 43%;
+    color: #fff;
+    margin-bottom: 35px;
+}
+
+.text-area h1 {
+    font-size: 50px;
+}
+
+.text-area p {
+    font-size: 25px;
+    font-weight: 500;
+}
+
+
+/* area header
+------ Formulário -----*/
+form  {
+    width: 26%;
+    background: #fff;
+    border-radius: 15px;
+    padding: 13px 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+form>label {
+    font-size: 25px;
+    font-weight: 500;
+    padding: 5px;
+    margin-bottom: 55px;
+}
+
+form input {;
+   padding-bottom: 10px; 
+   border: none;
+   font-size: 15px;
+}
+
+form button {
+    height: 50px;
+    margin: 40px 0 20px 0; 
+    border-radius: 50px;
+    border: none;
+    text-align: left;
+    text-indent: 20px;
+    cursor: pointer;
+}
+
+
+/* seção de conteúdos 
+
+/* seção 1
+------------------------*/
+section#postagem {
+    min-width: 900px;
+    height: 100vh;
+    margin-top: 30px;
+    margin-bottom: 10px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+#postagem .cartao-credito {
+    width: 44%;
+    margin-left: 20px;
+}
+
+#postagem .cartao-credito h1 {
+    color: var(--roxo);
+    margin-bottom: 0;
+    font-size: 50px;
+}
+
+#postagem .cartao-credito h2 {
+    font-size: 45px;
+}
+
+#postagem .cartao-credito a {
+    color: var(--roxo);
+    font-size: 20px;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+#postagem .cartao-credito a:hover {
+   text-decoration: underline;
+}
+
+#postagem .foto1 {
+    width: 43%;
+}
+
+#postagem .foto1 img {
+    width: 100%;
+    margin-left: 7px;
+}
+
+
+/* seção 2
+------------------------*/
+section#postagem2 {
+    min-width: 900px;
+    height: 100vh;
+    padding-top: 30px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+    background: rgb(240, 242, 245);
+}
+
+#postagem2 .nubank-ultravioleta {
+    width: 38%;
+    margin-left: 20px;
+}
+
+#postagem2 .nubank-ultravioleta h1 {
+    color: var(--roxo);
+    margin-bottom: 0;
+    font-size: 50px;
+}
+
+#postagem2 .nubank-ultravioleta h2 {
+    font-size: 45px;
+    
+}
+
+#postagem2 .nubank-ultravioleta a {
+    color: var(--roxo);
+    font-size: 20px;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+#postagem2 .nubank-ultravioleta a:hover {
+    text-decoration: underline;
+}
+
+#postagem2 .foto2 {
+    width: 43%;
+    margin-left: 70px;
+}
+
+#postagem2 .foto2 img {
+    width: 100%;
+    margin-left: 10px;
+}
+
+
+/* seção 3
+------------------------*/
+section#postagem3 {
+    min-width: 900px;
+    height: 100vh;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+#postagem3 .conta {
+    width: 50%;
+    margin-left: 20px;
+    padding-bottom: 40px;
+}
+
+#postagem3 .conta h1 {
+    color: var(--roxo);
+    margin-bottom: 0;
+    font-size: 50px;
+}
+
+#postagem3 .conta h2 {
+    font-size: 45px;
+}
+
+#postagem3 .conta a {
+    color: var(--roxo);
+    font-size: 20px;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+#postagem3 .conta a:hover {
+    text-decoration: underline;
+}
+
+#postagem3 .foto3 {
+    width: 40%;
+}
+
+#postagem3 .foto3 img {
+    width: 100%;
+    padding-left: 40%;
+}
+
+
+/* seção 4
+------------------------*/
+section#postagem4 {
+    min-width: 900px;
+    height: 100vh;
+    padding: 100px;
+    background: rgb(77, 0, 128);
+}
+
+#area {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    top: 25px;
+}
+
+#postagem4 .conta-pj {
+    width: 35%;
+}
+
+#postagem4 .conta-pj a:hover {
+    text-decoration: underline;
+    color: white;
+}
+
+#postagem4 .conta-pj h1 {
+    color: #fff;
+    margin-bottom: 0;
+    font-size: 50px;
+    text-decoration: none;
+    
+}
+
+#postagem4 .conta-pj h2 {
+    font-size: 2.6em;
+    color: #ffffffd5;
+    font-size: 45px;
+    
+    
+}
+
+#teste .conta-pj a {
+    color: #fff;
+    font-size: 20px;
+    text-decoration: none;
+    
+}
+
+#postagem4 .conta-pj a:hover {
+    text-decoration: underline;
+}
+
+#postagem4 .foto3 {
+    width: 55%;
+}
+
+#postagem4 .foto3 img {
+    width: 60%;
+    float: right;
+}
+
+
+/* seção - CAPA 1
+------------------------*/
+section#capa1 {
+    min-width: 900px;
+    height: 100vh;
+    min-width: 1000px;
+    background: url(../images/img5.jpeg) no-repeat center;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+}
+
+
+#capa1 .text-area {
+    margin-left: 5%;
+    margin-bottom: 5%;
+    color: #fff;
+}
+
+#capa1 .text-area h1 {
+    font-size: 50px;
+    margin-bottom: 20px ;
+}
+
+#capa1 .text-area a {
+    color: #fff;
+    text-decoration: none;
+}
+
+#capa1 .text-area a:hover {
+    text-decoration: underline;
+}
+
+
+/* seção - CAPA 2
+------------------------*/
+section#capa2 {
+    min-width: 900px;
+    height: 100vh;
+    min-width: 1000px;
+    background: url(../images/comunity.webp) no-repeat center;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    opacity: 1;
+}
+
+#capa2 .text-area2 {
+    margin-left: 3%;
+    color: black;
+    width: 34%;
+}
+
+#capa2 .text-area2 h1 {
+    font-size: 3.0em;
+    margin-bottom: 30px;
+}
+
+#capa2 .text-area2 a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 18px;
+    
+}
+
+#capa2 .text-area2 a:hover {
+    text-decoration: underline;
+    font-weight: bold;
+}
+
+
+/* seção - CAPA 3
+------------------------*/
+section#capa3 {
+    min-width: 900px;
+    height: 100vh;
+    min-width: 1000px;
+    background: url(../images/img7.webp) no-repeat center;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+}
+
+#capa3 .text-area3 {
+    margin-left: 15%;
+    color: black;
+}
+
+#capa3 .text-area3 h1 {
+    font-size: 50px;
+    width: 43%;
+    margin-bottom: 30px;
+    color: #FFF;
+}
+
+#capa3 .text-area3 a {
+    color: #fff;
+    font-weight: bold;
+    text-decoration: none;;
+}
+
+#capa3 .text-area3 a:hover {
+    text-decoration: underline;
+}
+
+/* formatações footer
+------------------------*/
+footer {
+    min-width: 950px;
+    background: rgba(0, 0, 0, 0.945);
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+footer #footer-content {
+    width: 92%;
+    padding: 70px;
+}
+
+footer .style {
+    color: #fff;
+    font-size: 1.0em;
+    width: 100%;
+}
+
+footer .style ul {
+    margin-top: 40px;
+}
+
+footer .style li {
+    width: 100%;
+    margin-top: 11px;
+}
+
+footer .style li a {
+    color: var(--branco);
+    text-decoration: none;
+}
+
+footer .style li a:hover {
+    color: var(--lilas);
+}
+
+/* 
+------- SEÇÃO A -------
+-*/
+section#secao-a {
+    display: flex;
+    justify-content: space-between;
+}
+
+#secao-a div {
+    width: 20%;
+}
+
+
+/* 
+------- SEÇÃO B -------
+*/
+section#secao-b {
+    margin-top: 90px;
+    display: flex;
+    justify-content: space-between;
+}
+
+#secao-b div {
+    width: 20%;
+}
+
+#secao-b .store {
+    width: 150px;
+    margin-top: 20px;
+}
+
+#secao-b .store img {
+    padding-top: 25px;
+    width: 150px;
+}
+
+
+/* 
+------- RODAPE -------
+*/
+ section#rodape {
+    margin: 150px 0;
+ }
+
+ #rodape .area-content {
+    align-items: center;
+    color: #FFF;
+ }
+
+ section#rodape img {
+    width: 4%;
+    height: 4%;
+ }
+
+ section#rodape p {
+    width: 50%;
+    margin-top: 20px;
+ }
+
+ 
+ /* Fim de folha CSS */
