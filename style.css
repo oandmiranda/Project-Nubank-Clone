@@ -36,15 +36,6 @@ a:hover, .selecionado a {
     font-weight: bold;
 }
 
-/* não soube setar a animação nessa caraia */
-@keyframes borda {
-    from {border-bottom: 0;
-    }
-    to {
-        border-bottom: 100px;
-    }
-}
-
 h1 {
     font-size: 18px;
 }
